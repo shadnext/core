@@ -5,7 +5,17 @@ import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   namespace: 'shadnext',
+  autoprefixCss: true,
+  taskQueue: 'async',
+  sourceMap: false,
+  buildEs5: 'prod',
+  minifyCss: true,
+  minifyJs: true,
+  enableCache: true,
   globalStyle: 'src/global/styles.css',
+  extras: {
+    experimentalImportInjection: true,
+  },
   plugins: [
     postcss({
       plugins: [
