@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'shadnext',
+  globalStyle: 'src/global/styles.css',
   outputTargets: [
     {
       type: 'dist',

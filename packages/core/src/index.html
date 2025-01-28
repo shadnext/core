@@ -7,20 +7,84 @@
 
     <script type="module" src="/build/shadnext.esm.js"></script>
     <script nomodule src="/build/shadnext.js"></script>
+    <link rel="stylesheet" href="/build/shadnext.css">
   </head>
   <body>
-    <my-button variant="default" size="lg">
-      <ion-icon slot="start" name="rocket"></ion-icon>
-      Click Me
-      <ion-icon slot="end" name="arrow-forward"></ion-icon>
-    </my-button>
-    
-    <my-button variant="outline" size="sm">
-      Secondary Action
-    </my-button>
-    
-    <my-button variant="link">
-      Learn More
-    </my-button>
+    <div style="padding: 2rem; display: flex; flex-direction: column; gap: 2rem;">
+      <!-- Variant Showcase -->
+      <section>
+        <h2>Button Variants</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <n-button variant="default">Default Button</n-button>
+          <n-button variant="destructive">Destructive Button</n-button>
+          <n-button variant="outline">Outline Button</n-button>
+          <n-button variant="secondary">Secondary Button</n-button>
+          <n-button variant="ghost">Ghost Button</n-button>
+          <n-button variant="link">Link Button</n-button>
+        </div>
+      </section>
+
+      <!-- Size Showcase -->
+      <section>
+        <h2>Button Sizes</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <n-button size="sm">Small Button</n-button>
+          <n-button size="default">Default Size</n-button>
+          <n-button size="lg">Large Button</n-button>
+        </div>
+      </section>
+
+      <!-- States Showcase -->
+      <section>
+        <h2>Button States</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <n-button disabled>Disabled Button</n-button>
+          <n-button type="submit" variant="primary">Submit Button</n-button>
+          <n-button type="reset" variant="outline">Reset Button</n-button>
+        </div>
+      </section>
+
+      <!-- Buttons with Slots -->
+      <section>
+        <h2>Buttons with Icons</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <n-button variant="default">
+            <span slot="start">🚀</span>
+            Start Icon
+          </n-button>
+          
+          <n-button variant="default">
+            End Icon
+            <span slot="end">→</span>
+          </n-button>
+          
+          <n-button variant="default">
+            <span slot="start">←</span>
+            Both Icons
+            <span slot="end">→</span>
+          </n-button>
+        </div>
+      </section>
+
+      <!-- Combined Examples -->
+      <section>
+        <h2>Combined Examples</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <n-button variant="destructive" size="lg">
+            <span slot="start">⚠️</span>
+            Delete Account
+          </n-button>
+          
+          <n-button variant="outline" size="sm">
+            <span slot="start">💾</span>
+            Save Draft
+          </n-button>
+          
+          <n-button variant="secondary" size="lg" disabled>
+            Processing...
+          </n-button>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

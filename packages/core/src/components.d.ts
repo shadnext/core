@@ -6,40 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyButton {
-        "disabled": boolean;
-        "size": 'sm' | 'default' | 'lg';
-        "type": 'button' | 'submit' | 'reset';
-        "variant": 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+    interface NButton {
+        "disabled"?: boolean;
+        "size"?: 'default' | 'sm' | 'lg';
+        "type"?: 'button' | 'submit' | 'reset';
+        "variant"?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
 }
 declare global {
-    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    interface HTMLNButtonElement extends Components.NButton, HTMLStencilElement {
     }
-    var HTMLMyButtonElement: {
-        prototype: HTMLMyButtonElement;
-        new (): HTMLMyButtonElement;
+    var HTMLNButtonElement: {
+        prototype: HTMLNButtonElement;
+        new (): HTMLNButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-button": HTMLMyButtonElement;
+        "n-button": HTMLNButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyButton {
+    interface NButton {
         "disabled"?: boolean;
-        "size"?: 'sm' | 'default' | 'lg';
+        "size"?: 'default' | 'sm' | 'lg';
         "type"?: 'button' | 'submit' | 'reset';
         "variant"?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
     interface IntrinsicElements {
-        "my-button": MyButton;
+        "n-button": NButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
+            "n-button": LocalJSX.NButton & JSXBase.HTMLAttributes<HTMLNButtonElement>;
         }
     }
 }
