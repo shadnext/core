@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="256" height="256" rx="32" fill="black"/>
+  
+  <!-- Simple Modern S -->
+  <path 
+    d="M48 80h80c16 0 32 16 32 32s-16 32-32 32H48c16 0 32 16 32 32s-16 32-32 32"
+    stroke="#007CF0"
+    stroke-width="24"
+    stroke-linecap="round"
+  />
+  
+  <!-- Simple Modern N -->
+  <path 
+    d="M128 80v96m0-96l80 96m0-96v96"
+    stroke="#FF0080"
+    stroke-width="24"
+    stroke-linecap="round"
+  />
+</svg>
