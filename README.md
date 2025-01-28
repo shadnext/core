@@ -1,60 +1,64 @@
-# ShadNext UI
+Here's a refined and polished version of your **ShadNext UI** documentation:  
 
-A collection of beautifully designed components built with StencilJS and TailwindCSS, inspired by shadcn/ui.
+---
 
-## Packages
+# ShadNext UI  
 
-This monorepo contains the following packages:
+A **fully unstyled**, lightweight, and accessible UI component library built with **StencilJS** and **TailwindCSS**, inspired by **shadcn/ui**.  
 
-| Package | Description | Version |
-|---------|-------------|---------|
-| [@shadnext/core](./packages/core) | Core UI components built with StencilJS | [![npm](https://img.shields.io/npm/v/@shadnext/core.svg)](https://www.npmjs.com/package/@shadnext/core) |
+## 📦 Packages  
 
-## Getting Started
+This monorepo contains the following package:  
 
-### Prerequisites
+| Package | Description | Version |  
+|---------|-------------|---------|  
+| [@shadnext/core](./packages/core) | Core UI components built with StencilJS | [![npm](https://img.shields.io/npm/v/@shadnext/core.svg)](https://www.npmjs.com/package/@shadnext/core) |  
 
-- Node.js 16.x or higher
-- npm 7.x or higher
-- pnpm (recommended)
+## 🚀 Getting Started  
 
-### Installation
+### Prerequisites  
 
-1. Clone the repository:
-```bash
-git clone https://github.com/shadnext/core.git
-cd core
-```
+- **Node.js** 16.x or higher  
+- **npm** 7.x or higher  
+- **pnpm** (recommended)  
 
-2. Install dependencies:
-```bash
-pnpm install
-```
+### Installation  
 
-3. Start development server:
-```bash
-pnpm start
-```
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/shadnext/core.git
+   cd core
+   ```  
 
-## Development Workflow
+2. Install dependencies:  
+   ```bash
+   pnpm install
+   ```  
 
-### Available Commands
+3. Start the development server:  
+   ```bash
+   pnpm start
+   ```  
+
+## 🛠 Development Workflow  
+
+### Available Commands  
 
 ```bash
 # Start development server for core package
-pnpm start
+pnpm start  
 
 # Build core package
-pnpm build
+pnpm build  
 
 # Build all packages
-pnpm build:all
+pnpm build:all  
 
 # Publish packages
-pnpm publish:all
-```
+pnpm publish:all  
+```  
 
-### Project Structure
+### Project Structure  
 
 ```
 shadnext/
@@ -66,47 +70,55 @@ shadnext/
 │       └── package.json
 ├── package.json           # Root package.json
 └── lerna.json            # Lerna configuration
-```
+```  
 
-## Components
+## 📌 Components  
 
-Currently available components:
+Currently available components:  
 
-- [Button](./packages/core/src/components/button) - A versatile button component with various styles and states
+- [Button](./packages/core/src/components/button) – A versatile button component with various styles and states.  
 
-## Contributing
+## 🤝 Contributing  
 
-We're excited that you're interested in contributing! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+We'd love your contributions! Please check out our [Contributing Guide](./CONTRIBUTING.md) for more details.  
 
-### Development Process
+### Development Process  
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. **Fork** the repository.  
+2. Create a **feature branch**:  
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```  
+3. **Commit your changes**:  
+   ```bash
+   git commit -m 'feat: add some amazing feature'
+   ```  
+4. **Push to your branch**:  
+   ```bash
+   git push origin feature/amazing-feature
+   ```  
+5. **Open a Pull Request**.  
 
-## Publishing
+## 📦 Publishing  
 
-This repository uses Lerna to manage package versioning and publishing. To publish new versions:
+This repository uses **Lerna** for package versioning and publishing.  
 
-1. Make sure you're logged in to npm:
-```bash
-npm login
-```
+1. Ensure you're logged in to npm:  
+   ```bash
+   npm login
+   ```  
+2. Build and publish packages:  
+   ```bash
+   pnpm build:all
+   pnpm publish:all
+   ```  
 
-2. Build and publish packages:
-```bash
-pnpm build:all
-pnpm publish:all
-```
+## 📜 License  
 
-## License
+MIT © ShadNext UI  
 
-MIT © ShadNext UI
+## 🙌 Acknowledgments  
 
-## Acknowledgments
-
-- [shadcn/ui](https://ui.shadcn.com/) - For the original design inspiration
-- [StencilJS](https://stenciljs.com/) - For the powerful web components framework
-- [TailwindCSS](https://tailwindcss.com/) - For the utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) – Original design inspiration.  
+- [StencilJS](https://stenciljs.com/) – Web components framework.  
+- [TailwindCSS](https://tailwindcss.com/) – Utility-first CSS framework.  
