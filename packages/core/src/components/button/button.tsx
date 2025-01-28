@@ -32,7 +32,7 @@ const buttonVariants = cva(
   shadow: true,
   styleUrl: 'button.css',
 })
-export class MyButton implements VariantProps<typeof buttonVariants> {
+export class Button implements VariantProps<typeof buttonVariants> {
   @Prop() variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' = 'default';
   @Prop() size?: 'default' | 'sm' | 'lg' | 'icon' = 'default';
   @Prop() disabled?: boolean = false;

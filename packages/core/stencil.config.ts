@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { postcss } from '@stencil/postcss';
 import tailwind from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
 export const config: Config = {
   namespace: 'shadnext',
@@ -20,7 +21,8 @@ export const config: Config = {
     postcss({
       plugins: [
         tailwind(),
-        autoprefixer()
+        autoprefixer(),
+        cssnano({ preset: 'default' }),
       ]
     })
   ],
