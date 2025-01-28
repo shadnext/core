@@ -1,12 +1,12 @@
 # @shadnext/core
 
-A fully unstyled, lightweight, and accessible UI component library inspired by shadcn/ui. It provides pure web components with Shadow DOM support, making it framework-agnostic and easy to integrate across different package managers and CDNs.
+A lightweight, unstyled, and accessible UI component library inspired by shadcn/ui. It provides pure web components with Shadow DOM support, making it framework-agnostic and easy to integrate across different package managers and CDNs.
 
 ## ✨ Features
-- 🚀 **Pure Web Components** – No dependencies, works anywhere.
+- 🚀 **Pure Web Components** – No dependencies; works anywhere.
 - 🎨 **Fully Unstyled & Customizable** – Built with TailwindCSS, easily themeable.
 - ⚡ **Shadow DOM Support** – Encapsulation without style conflicts.
-- 📦 **Multiple Installation Methods** – Supports CDN and package managers.
+- 📦 **Multiple Installation Methods** – Supports CDN and various package managers.
 - 🛠 **Lightweight & Fast** – Optimized for performance.
 
 ---
@@ -14,6 +14,7 @@ A fully unstyled, lightweight, and accessible UI component library inspired by s
 ## 📦 Installation
 
 ### 1️⃣ Using a CDN (Easiest)
+To include `@shadnext/core` via CDN, add the following lines to the `<head>` of your HTML:
 ```html
 <head>
   <script type="module" src="https://unpkg.com/@shadnext/core/dist/shadnext/shadnext.esm.js"></script>
@@ -22,18 +23,23 @@ A fully unstyled, lightweight, and accessible UI component library inspired by s
 ```
 
 ### 2️⃣ Using Package Managers
+To install `@shadnext/core` using a package manager, run one of the following commands:
+
 #### npm
 ```bash
 npm install @shadnext/core
 ```
+
 #### yarn
 ```bash
 yarn add @shadnext/core
 ```
+
 #### pnpm
 ```bash
 pnpm add @shadnext/core
 ```
+
 #### bun
 ```bash
 bun add @shadnext/core
@@ -44,6 +50,7 @@ bun add @shadnext/core
 ## 🚀 Quick Start
 
 ### Basic Usage
+Here’s a simple example to get started with `@shadnext/core`:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -69,9 +76,50 @@ bun add @shadnext/core
 
 ---
 
-## 🎨 Theming
-ShadNext has no default styles, allowing complete customization. You can style it using CSS variables or integrate it with TailwindCSS.
+## Using Styles
 
+### CDN Usage
+To include styles via CDN, add the following lines to the `<head>` of your HTML:
+```html
+<link rel="stylesheet" href="https://unpkg.com/@shadnext/core/presets/shadcn/base.css">
+<link rel="stylesheet" href="https://unpkg.com/@shadnext/core/presets/shadcn/button.css">
+```
+
+### Package Manager Usage
+To use styles with a package manager, run:
+```bash
+# For npm
+npm install @shadnext/core
+
+# For yarn
+yarn add @shadnext/core
+```
+Then, import the styles in your main CSS or JavaScript file:
+```javascript
+import '@shadnext/core/presets/shadcn/base.css';
+import '@shadnext/core/presets/shadcn/button.css';
+```
+
+This will ensure the styles are applied to your project.
+
+---
+
+## Styling Options
+
+`@shadnext/core` does not come with default styles but provides various presets that users can choose to use or customize. Users can find the following presets:
+
+- Base styles: [Base CSS](https://unpkg.com/@shadnext/core/presets/shadcn/base.css)
+- Button styles: [Button CSS](https://unpkg.com/@shadnext/core/presets/shadcn/button.css)
+
+Feel free to use these presets or create your own styles as needed.
+
+---
+
+## Customization Variables
+
+Users can customize their styles by setting the following variables:
+
+To set base variables, add the following code to your CSS file:
 ```css
 :root {
     /* Base colors */
@@ -79,130 +127,29 @@ ShadNext has no default styles, allowing complete customization. You can style i
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-  
+    /* Add other variables as needed */
+}
+```
+
+To set button variables, add the following code to your CSS file:
+```css
+:root {
     /* Button base styles */
     --button-font-weight: 500;
     --button-height: 2.5rem;
-    --button-padding-x: 1rem;
-    --button-padding-y: 0.5rem;
-    --button-text-size: 0.875rem;
-    --button-line-height: 1.25rem;
-    --button-radius: var(--radius);
-    
-    /* Button sizes */
-    --button-sm-height: 2.25rem;
-    --button-sm-padding-x: 0.75rem;
-    --button-lg-height: 2.75rem;
-    --button-lg-padding-x: 2rem;
-    --button-icon-size: 2.5rem;
-  
-    /* Button variants */
     --button-bg: hsl(var(--primary));
     --button-text: hsl(var(--primary-foreground));
-    --button-hover-bg: hsl(var(--primary) / 0.9);
-    --button-hover-text: hsl(var(--primary-foreground));
-    
-    --button-destructive-bg: hsl(var(--destructive));
-    --button-destructive-text: hsl(var(--destructive-foreground));
-    --button-destructive-hover-bg: hsl(var(--destructive) / 0.9);
-    --button-destructive-hover-text: hsl(var(--destructive-foreground));
-    
-    --button-outline-border: hsl(var(--border));
-    --button-outline-bg: transparent;
-    --button-outline-text: hsl(var(--foreground));
-    --button-outline-hover-bg: hsl(var(--accent));
-    --button-outline-hover-text: hsl(var(--accent-foreground));
-    
-    --button-secondary-bg: hsl(var(--secondary));
-    --button-secondary-text: hsl(var(--secondary-foreground));
-    --button-secondary-hover-bg: hsl(var(--secondary) / 0.8);
-    --button-secondary-hover-text: hsl(var(--secondary-foreground));
-    
-    --button-ghost-bg: transparent;
-    --button-ghost-text: hsl(var(--foreground));
-    --button-ghost-hover-bg: hsl(var(--accent));
-    --button-ghost-hover-text: hsl(var(--accent-foreground));
-    
-    --button-link-text: hsl(var(--primary));
-    --button-link-hover-text: hsl(var(--primary) / 0.9);
-    
-    /* Button states */
-    --button-disabled-opacity: 0.5;
-    --button-disabled-cursor: not-allowed;
-    
-    /* Button transitions */
-    --button-transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-  }
-  
-  .dark {
-    /* Base colors */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  
-    /* Button variants - dark mode specific */
-    --button-bg: hsl(var(--primary));
-    --button-text: hsl(var(--primary-foreground));
-    --button-hover-bg: hsl(var(--primary) / 0.9);
-    --button-hover-text: hsl(var(--primary-foreground));
-    
-    --button-destructive-bg: hsl(var(--destructive));
-    --button-destructive-text: hsl(var(--destructive-foreground));
-    --button-destructive-hover-bg: hsl(var(--destructive) / 0.9);
-    --button-destructive-hover-text: hsl(var(--destructive-foreground));
-    
-    --button-outline-border: hsl(var(--border));
-    --button-outline-bg: transparent;
-    --button-outline-text: hsl(var(--foreground));
-    --button-outline-hover-bg: hsl(var(--accent));
-    --button-outline-hover-text: hsl(var(--accent-foreground));
-    
-    --button-secondary-bg: hsl(var(--secondary));
-    --button-secondary-text: hsl(var(--secondary-foreground));
-    --button-secondary-hover-bg: hsl(var(--secondary) / 0.8);
-    --button-secondary-hover-text: hsl(var(--secondary-foreground));
-    
-    --button-ghost-bg: transparent;
-    --button-ghost-text: hsl(var(--foreground));
-    --button-ghost-hover-bg: hsl(var(--accent));
-    --button-ghost-hover-text: hsl(var(--accent-foreground));
-    
-    --button-link-text: hsl(var(--primary));
-    --button-link-hover-text: hsl(var(--primary) / 0.9);
-  }
+    /* Add other button variables as needed */
+}
 ```
+
+---
+
+## 🎨 Theming
+`@shadnext/core` has no default styles, allowing complete customization. You can style it using CSS variables or integrate it with TailwindCSS.
+
 For a complete list of CSS variables, check the [documentation](#).
 
 ---
@@ -212,10 +159,11 @@ MIT
 
 ---
 
-## 🙏 Acknowledgments
-Inspired by **shadcn/ui**
+## 🙌 Acknowledgments  
+- [shadcn/ui](https://ui.shadcn.com/) – Original design inspiration.  
+- [StencilJS](https://stenciljs.com/) – Web components framework.  
+- [TailwindCSS](https://tailwindcss.com/) – Utility-first CSS framework.  
 
 ---
 
 For more details, visit our [official documentation](#).
-

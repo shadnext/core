@@ -6,18 +6,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[var(--button-bg,hsl(var(--primary)))] text-[var(--button-text,hsl(var(--primary-foreground)))] hover:bg-[var(--button-hover-bg,hsl(var(--primary)/0.9))]",
-        destructive: "bg-[var(--button-destructive-bg,hsl(var(--destructive)))] text-[var(--button-destructive-text,hsl(var(--destructive-foreground)))] hover:bg-[var(--button-destructive-hover-bg,hsl(var(--destructive)/0.9))]",
-        outline: "border border-[var(--button-border,hsl(var(--input)))] bg-[var(--button-outline-bg,hsl(var(--background)))] hover:bg-[var(--button-outline-hover-bg,hsl(var(--accent)))] hover:text-[var(--button-outline-hover-text,hsl(var(--accent-foreground)))]",
-        secondary: "bg-[var(--button-secondary-bg,hsl(var(--secondary)))] text-[var(--button-secondary-text,hsl(var(--secondary-foreground)))] hover:bg-[var(--button-secondary-hover-bg,hsl(var(--secondary)/0.8))]",
-        ghost: "hover:bg-[var(--button-ghost-hover-bg,hsl(var(--accent)))] hover:text-[var(--button-ghost-hover-text,hsl(var(--accent-foreground)))]",
-        link: "text-[var(--button-link-text,hsl(var(--primary)))] underline-offset-4 hover:underline",
+        default: "bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-[var(--button-hover-bg)]",
+        destructive: "bg-[var(--button-destructive-bg)] text-[var(--button-destructive-text)] hover:bg-[var(--button-destructive-hover-bg)]",
+        outline: "border border-[var(--button-outline-border)] bg-[var(--button-outline-bg)] hover:bg-[var(--button-outline-hover-bg)] hover:text-[var(--button-outline-hover-text)]",
+        secondary: "bg-[var(--button-secondary-bg)] text-[var(--button-secondary-text)] hover:bg-[var(--button-secondary-hover-bg)]",
+        ghost: "bg-[var(--button-ghost-bg)] text-[var(--button-ghost-text)] hover:bg-[var(--button-ghost-hover-bg)] hover:text-[var(--button-ghost-hover-text)]",
+        link: "text-[var(--button-link-text)] underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-[var(--button-height,2.5rem)] px-[var(--button-padding-x,1rem)] py-[var(--button-padding-y,0.5rem)]",
-        sm: "h-[var(--button-sm-height,2.25rem)] rounded-md px-[var(--button-sm-padding-x,0.75rem)]",
-        lg: "h-[var(--button-lg-height,2.75rem)] rounded-md px-[var(--button-lg-padding-x,2rem)]",
-        icon: "h-[var(--button-icon-size,2.5rem)] w-[var(--button-icon-size,2.5rem)]",
+        default: "h-[var(--button-height)] px-[var(--button-padding-x)] py-[var(--button-padding-y)]",
+        sm: "h-[var(--button-sm-height)] rounded-md px-[var(--button-sm-padding-x)] py-[var(--button-sm-padding-y)]",
+        lg: "h-[var(--button-lg-height)] rounded-md px-[var(--button-lg-padding-x)] py-[var(--button-lg-padding-y)]",
+        icon: "h-[var(--button-icon-size)] w-[var(--button-icon-size)]",
       },
     },
     defaultVariants: {
