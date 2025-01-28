@@ -29,7 +29,8 @@ const buttonVariants = cva(
 
 @Component({
   tag: 'n-button',
-  shadow: false,
+  shadow: true,
+  styleUrl: 'button.css',
 })
 export class MyButton implements VariantProps<typeof buttonVariants> {
   @Prop() variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' = 'default';
