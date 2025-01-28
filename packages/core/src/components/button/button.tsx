@@ -40,6 +40,33 @@ export class Button implements VariantProps<typeof buttonVariants> {
   @Prop() asChild?: boolean = false;
   @Prop() loading?: boolean = false;
 
+  private renderButtonContent() {
+    if (this.loading) {
+      return (
+        <div class="inline-flex items-center gap-x-2">
+          <span class="h-4 w-4 animate-spin">
+            <slot name="loading">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </slot>
+          </span>
+          <slot></slot>
+        </div>
+      );
+    }
+
+    return (
+      <Fragment>
+        <slot name="start"></slot>
+        <slot></slot>
+        <slot name="end"></slot>
+        <span>Click me</span>
+      </Fragment>
+    );
+  }
+
   render() {
     const buttonClass = buttonVariants({ variant: this.variant, size: this.size });
 
@@ -50,55 +77,19 @@ export class Button implements VariantProps<typeof buttonVariants> {
       'aria-disabled': (this.disabled || this.loading) ? 'true' : null
     };
 
+    const ButtonContent = () => this.renderButtonContent();
+
     return (
       <Host>
         {this.asChild ? (
           <slot name="button">
             <button {...buttonProps}>
-              {this.loading ? (
-                <div class="inline-flex items-center gap-x-2">
-                  <span class="h-4 w-4 animate-spin">
-                    <slot name="loading">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                    </slot>
-                  </span>
-                  <slot></slot>
-                </div>
-              ) : (
-                <Fragment>
-                  <slot name="start"></slot>
-                  <slot></slot>
-                  <slot name="end"></slot>
-                  <span>Click me</span>
-                </Fragment>
-              )}
+              <ButtonContent />
             </button>
           </slot>
         ) : (
           <button {...buttonProps}>
-            {this.loading ? (
-              <div class="inline-flex items-center gap-x-2">
-                <span class="h-4 w-4 animate-spin">
-                  <slot name="loading">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  </slot>
-                </span>
-                <slot></slot>
-              </div>
-            ) : (
-              <>
-                <slot name="start"></slot>
-                <slot></slot>
-                <slot name="end"></slot>
-                <span>Click me</span>
-              </>
-            )}
+            <ButtonContent />
           </button>
         )}
       </Host>
