@@ -1,10 +1,10 @@
 # @shadnext/core
 
-A lightweight, accessible UI component library built with **StencilJS** and **TailwindCSS**, inspired by **shadcn/ui**. It provides **pure web components** with **Shadow DOM** support, making it framework-agnostic and easy to integrate across different package managers and CDNs.
+A fully unstyled, lightweight, and accessible UI component library inspired by shadcn/ui. It provides pure web components with Shadow DOM support, making it framework-agnostic and easy to integrate across different package managers and CDNs.
 
 ## ✨ Features
 - 🚀 **Pure Web Components** – No dependencies, works anywhere.
-- 🎨 **Customizable** – Built with TailwindCSS, easily themeable.
+- 🎨 **Fully Unstyled & Customizable** – Built with TailwindCSS, easily themeable.
 - ⚡ **Shadow DOM Support** – Encapsulation without style conflicts.
 - 📦 **Multiple Installation Methods** – Supports CDN and package managers.
 - 🛠 **Lightweight & Fast** – Optimized for performance.
@@ -70,7 +70,7 @@ bun add @shadnext/core
 ---
 
 ## 🎨 Theming
-ShadNext provides a set of default styles based on TailwindCSS. You can override styles using CSS variables.
+ShadNext has no default styles, allowing complete customization. You can style it using CSS variables or integrate it with TailwindCSS.
 
 ```css
 :root {
@@ -216,13 +216,6 @@ MIT
 Inspired by **shadcn/ui**
 
 ---
-
-This README includes:
-- ✅ **Multiple installation methods** (CDN, npm, yarn, pnpm, bun)
-- ✅ **Quick start guide** with HTML examples
-- ✅ **Detailed theming options**
-- ✅ **Optimized for Shadow DOM & Web Components**
-- ✅ **MIT Licensed**
 
 For more details, visit our [official documentation](#).
 
