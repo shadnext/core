@@ -1,8 +1,9 @@
 {
   "name": "@shadnext/core",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "files": ["presets", "presets/**/*"]
   },
   "description": "Beautifully designed components built with StencilJS and TailwindCSS, inspired by shadcn/ui",
   "keywords": [
@@ -44,6 +45,7 @@
   "files": [
     "dist/",
     "loader/",
+    "presets/",
     "readme.md"
   ],
   "scripts": {
