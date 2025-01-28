@@ -1,10 +1,10 @@
 # @shadnext/core
 
-A lightweight, unstyled, and accessible UI component library inspired by shadcn/ui. It provides pure web components with Shadow DOM support, making it framework-agnostic and easy to integrate across different package managers and CDNs.
+A lightweight, unstyled, and accessible UI component library. It provides pure web components with Shadow DOM support, making it easy to integrate across different package managers and CDNs.
 
 ## ✨ Features
 - 🚀 **Pure Web Components** – No dependencies; works anywhere.
-- 🎨 **Fully Unstyled & Customizable** – Built with TailwindCSS, easily themeable.
+- 🎨 **Fully Unstyled & Customizable** – Easily themeable.
 - ⚡ **Shadow DOM Support** – Encapsulation without style conflicts.
 - 📦 **Multiple Installation Methods** – Supports CDN and various package managers.
 - 🛠 **Lightweight & Fast** – Optimized for performance.
@@ -63,7 +63,6 @@ Here’s a simple example to get started with `@shadnext/core`:
 
   <!-- 1️⃣ Using CDN -->
   <script type="module" src="https://unpkg.com/@shadnext/core/dist/shadnext/shadnext.esm.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@shadnext/core/dist/shadnext/shadnext.css">
 
   <!-- 2️⃣ Using npm/yarn/pnpm/bun -->
   <script type="module" src="./node_modules/@shadnext/core/dist/shadnext/shadnext.esm.js"></script>
@@ -89,9 +88,6 @@ To include styles via CDN, add the following lines to the `<head>` of your HTML:
 To use styles with a package manager, run:
 ```bash
 # For npm
-npm install @shadnext/core
-
-# For yarn
 yarn add @shadnext/core
 ```
 Then, import the styles in your main CSS or JavaScript file:
@@ -145,12 +141,30 @@ To set button variables, add the following code to your CSS file:
 }
 ```
 
+For a full guide to all style variables, visit the [presets directory on GitHub](https://github.com/shadnext/core/tree/dev/packages/core/presets).
+
+---
+
+## Using `@use` in SCSS and CSS
+
+In SCSS, you can use the `@use` rule to import styles from `@shadnext/core` efficiently:
+```scss
+@use "@shadnext/core/presets/shadcn/base";
+@use "@shadnext/core/presets/shadcn/button";
+```
+
+For regular CSS, you can use `@import` (though `@use` is preferred in SCSS for better scoping):
+```css
+@import "@shadnext/core/presets/shadcn/base.css";
+@import "@shadnext/core/presets/shadcn/button.css";
+```
+
 ---
 
 ## 🎨 Theming
-`@shadnext/core` has no default styles, allowing complete customization. You can style it using CSS variables or integrate it with TailwindCSS.
+`@shadnext/core` has no default styles, allowing complete customization. You can style it using CSS variables or import styles via SCSS or CSS.
 
-For a complete list of CSS variables, check the [documentation](#).
+For a complete list of CSS variables, check the [documentation](https://github.com/shadnext/core/tree/dev/packages/core/presets).
 
 ---
 
@@ -163,7 +177,3 @@ MIT
 - [shadcn/ui](https://ui.shadcn.com/) – Original design inspiration.  
 - [StencilJS](https://stenciljs.com/) – Web components framework.  
 - [TailwindCSS](https://tailwindcss.com/) – Utility-first CSS framework.  
-
----
-
-For more details, visit our [official documentation](#).
