@@ -1,17 +1,23 @@
 {
   "name": "root",
   "private": false,
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "lerna run start --scope @shadnext/core",
     "build": "lerna run build --scope @shadnext/core",
-    "build:all":"lerna run build",
-    "publish:all":"lerna publish from-package --yes"
-
+    "build:all": "lerna run build",
+    "publish:all": "lerna publish from-package --yes",
+    "test": "lerna run test",
+    "test:watch": "lerna run test -- --watch"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
     "lerna": "^8.1.9",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "puppeteer": "^21.9.0"
   }
 }

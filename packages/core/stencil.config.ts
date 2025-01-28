@@ -46,5 +46,7 @@ export const config: Config = {
   ],
   testing: {
     browserHeadless: "shell",
-  },
+    browserArgs: [`--no-sandbox`, `--disable-setuid-sandbox`, `--disable-dev-shm-usage`],
+    browserExecutablePath: '/snap/bin/chromium'
+  }  
 };
