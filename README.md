@@ -1,6 +1,3 @@
-Here's a refined and polished version of your **ShadNext UI** documentation:  
-
----
 
 # ShadNext UI  
 
