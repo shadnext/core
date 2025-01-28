@@ -1,6 +1,6 @@
 {
   "name": "@shadnext/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -16,9 +16,9 @@
       "import": "./dist/cn/cn.esm.js",
       "require": "./dist/cn/cn.cjs.js"
     },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./button": {
+      "import": "./dist/components/n-button.js",
+      "types": "./dist/components/n-button.d.ts"
     },
     "./loader": {
       "import": "./loader/index.js",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/shadnext/core"
   },
   "files": [
     "dist/",

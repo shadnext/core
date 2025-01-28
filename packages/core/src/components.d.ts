@@ -7,8 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface NButton {
+        "asChild"?: boolean;
         "disabled"?: boolean;
-        "size"?: 'default' | 'sm' | 'lg';
+        "loading"?: boolean;
+        "size"?: 'default' | 'sm' | 'lg' | 'icon';
         "type"?: 'button' | 'submit' | 'reset';
         "variant"?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
@@ -26,8 +28,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface NButton {
+        "asChild"?: boolean;
         "disabled"?: boolean;
-        "size"?: 'default' | 'sm' | 'lg';
+        "loading"?: boolean;
+        "size"?: 'default' | 'sm' | 'lg' | 'icon';
         "type"?: 'button' | 'submit' | 'reset';
         "variant"?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
