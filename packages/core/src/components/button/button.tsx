@@ -62,7 +62,6 @@ export class Button implements VariantProps<typeof buttonVariants> {
         <slot name="start"></slot>
         <slot></slot>
         <slot name="end"></slot>
-        <span>Click me</span>
       </Fragment>
     );
   }
