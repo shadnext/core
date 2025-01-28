@@ -18,7 +18,6 @@ To include `@shadnext/core` via CDN, add the following lines to the `<head>` of 
 ```html
 <head>
   <script type="module" src="https://unpkg.com/@shadnext/core/dist/shadnext/shadnext.esm.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@shadnext/core/dist/shadnext/shadnext.css">
 </head>
 ```
 
