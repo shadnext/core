@@ -32,6 +32,8 @@
   --button-outline-border: hsl(var(--border));
   --button-outline-bg: transparent;
   --button-outline-text: hsl(var(--foreground));
+  --button-outline-hover-bg: hsl(var(--secondary));
+  --button-outline-hover-text: hsl(var(--secondary-foreground));
 
   --button-secondary-bg: hsl(var(--secondary));
   --button-secondary-text: hsl(var(--secondary-foreground));
@@ -40,6 +42,8 @@
 
   --button-ghost-bg: transparent;
   --button-ghost-text: hsl(var(--foreground));
+  --button-ghost-hover-bg: hsl(var(--secondary));
+  --button-ghost-hover-text: hsl(var(--secondary-foreground));
 
   --button-primary-bg: hsl(var(--primary));
   --button-primary-text: hsl(var(--primary-foreground));
@@ -73,6 +77,8 @@
   --button-outline-border: hsl(var(--border));
   --button-outline-bg: transparent;
   --button-outline-text: hsl(var(--foreground));
+  --button-outline-hover-bg: hsl(var(--secondary));
+  --button-outline-hover-text: hsl(var(--secondary-foreground));
 
   --button-secondary-bg: hsl(var(--secondary));
   --button-secondary-text: hsl(var(--secondary-foreground));
@@ -81,6 +87,8 @@
 
   --button-ghost-bg: transparent;
   --button-ghost-text: hsl(var(--foreground));
+  --button-ghost-hover-bg: hsl(var(--secondary));
+  --button-ghost-hover-text: hsl(var(--secondary-foreground));
 
   --button-primary-bg: hsl(var(--primary));
   --button-primary-text: hsl(var(--primary-foreground));
