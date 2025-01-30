@@ -3,7 +3,10 @@
   "version": "0.0.24",
   "publishConfig": {
     "access": "public",
-    "files": ["presets", "presets/**/*"]
+    "files": [
+      "presets",
+      "presets/**/*"
+    ]
   },
   "description": "Beautifully designed components built with StencilJS and TailwindCSS, inspired by shadcn/ui",
   "keywords": [
@@ -75,5 +78,6 @@
   "license": "MIT",
   "dependencies": {
     "class-variance-authority": "^0.7.1"
-  }
+  },
+  "gitHead": "61c674beebf37c62ee1671f9719c483c8cd2658d"
 }

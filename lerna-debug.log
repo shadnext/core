@@ -1,0 +1,66 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   yes: true,
+0 silly argv   y: true,
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '8.1.9',
+0 silly argv   '$0': 'node_modules/lerna/dist/cli.js',
+0 silly argv   bump: 'from-package'
+0 silly argv }
+1 notice cli v8.1.9
+2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
+3 verbose rootPath /home/aenima/core
+4 verbose session 6726c65f9d2c3b95
+5 verbose user-agent lerna/8.1.9/node@v22.13.0+x64 (linux)
+6 verbose git-describe undefined => "61c674b"
+7 silly git-describe parsed => {"refCount":"35","sha":"61c674b","isDirty":false}
+8 silly getProjectsWithUnpublishedPackages
+9 warn Unable to determine published version, assuming "@shadnext/core" unpublished.
+10 info auto-confirmed
+11 info publish Publishing packages to npm...
+12 silly getCurrentSHA
+13 verbose getCurrentSHA 61c674beebf37c62ee1671f9719c483c8cd2658d
+14 silly lifecycle No script for "prepublish" in "root", continuing
+15 silly lifecycle No script for "prepare" in "root", continuing
+16 silly lifecycle No script for "prepublishOnly" in "root", continuing
+17 silly lifecycle No script for "prepack" in "root", continuing
+18 verbose pack-directory packages/core
+19 silly lifecycle No script for "prepublish" in "@shadnext/core", continuing
+20 silly lifecycle No script for "prepare" in "@shadnext/core", continuing
+21 silly lifecycle No script for "prepublishOnly" in "@shadnext/core", continuing
+22 silly lifecycle No script for "prepack" in "@shadnext/core", continuing
+23 silly lifecycle No script for "postpack" in "@shadnext/core", continuing
+24 verbose packed packages/core
+25 silly lifecycle No script for "postpack" in "root", continuing
+26 verbose publish @shadnext/core
+27 silly FetchError: request to https://registry.npmjs.org/@shadnext%2fcore failed, reason: Client network socket disconnected before secure TLS connection was established
+27 silly     at ClientRequest.<anonymous> (/home/aenima/core/node_modules/.pnpm/minipass-fetch@3.0.5/node_modules/minipass-fetch/lib/index.js:130:14)
+27 silly     at ClientRequest.emit (node:events:524:28)
+27 silly     at emitErrorEvent (node:_http_client:104:11)
+27 silly     at _destroy (node:_http_client:898:9)
+27 silly     at onSocketNT (node:_http_client:918:5)
+27 silly     at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+27 silly  FetchError: request to https://registry.npmjs.org/@shadnext%2fcore failed, reason: Client network socket disconnected before secure TLS connection was established
+27 silly     at ClientRequest.<anonymous> (/home/aenima/core/node_modules/.pnpm/minipass-fetch@3.0.5/node_modules/minipass-fetch/lib/index.js:130:14)
+27 silly     at ClientRequest.emit (node:events:524:28)
+27 silly     at emitErrorEvent (node:_http_client:104:11)
+27 silly     at _destroy (node:_http_client:898:9)
+27 silly     at onSocketNT (node:_http_client:918:5)
+27 silly     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+27 silly   code: 'ECONNRESET',
+27 silly   path: null,
+27 silly   host: 'registry.npmjs.org',
+27 silly   port: 443,
+27 silly   localAddress: undefined,
+27 silly   errno: 'ECONNRESET',
+27 silly   type: 'system'
+27 silly }
+28 warn notice Package failed to publish: @shadnext/core
+29 error ECONNRESET request to https://registry.npmjs.org/@shadnext%2fcore failed, reason: Client network socket disconnected before secure TLS connection was established
+30 error errno "ECONNRESET" is not a valid exit code - exiting with code 1
+31 error FetchError: request to https://registry.npmjs.org/@shadnext%2fcore failed, reason: Client network socket disconnected before secure TLS connection was established
+31 error     at ClientRequest.<anonymous> (/home/aenima/core/node_modules/.pnpm/minipass-fetch@3.0.5/node_modules/minipass-fetch/lib/index.js:130:14)
+31 error     at ClientRequest.emit (node:events:524:28)
+31 error     at emitErrorEvent (node:_http_client:104:11)
+31 error     at _destroy (node:_http_client:898:9)
+31 error     at onSocketNT (node:_http_client:918:5)
