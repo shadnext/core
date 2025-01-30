@@ -6,12 +6,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-[var(--button-hover-bg)]",
-        destructive: "bg-[var(--button-destructive-bg)] text-[var(--button-destructive-text)] hover:bg-[var(--button-destructive-hover-bg)]",
-        outline: "border border-[var(--button-outline-border)] bg-[var(--button-outline-bg)] hover:bg-[var(--button-outline-hover-bg)] hover:text-[var(--button-outline-hover-text)]",
-        secondary: "bg-[var(--button-secondary-bg)] text-[var(--button-secondary-text)] hover:bg-[var(--button-secondary-hover-bg)]",
+        default: "bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-[var(--button-hover-bg)] hover:text-[var(--button-hover-text)]",
+        primary: "bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] hover:bg-[var(--button-primary-hover-bg)] hover:text-[var(--button-primary-hover-text)]",
+        destructive: "bg-[var(--button-destructive-bg)] text-[var(--button-destructive-text)] hover:bg-[var(--button-destructive-hover-bg)] hover:text-[var(--button-destructive-hover-text)]",
+        outline: "border border-[var(--button-outline-border)] bg-[var(--button-outline-bg)] text-[var(--button-outline-text)] hover:bg-[var(--button-outline-hover-bg)] hover:text-[var(--button-outline-hover-text)]",
+        secondary: "bg-[var(--button-secondary-bg)] text-[var(--button-secondary-text)] hover:bg-[var(--button-secondary-hover-bg)] hover:text-[var(--button-secondary-hover-text)]",
         ghost: "bg-[var(--button-ghost-bg)] text-[var(--button-ghost-text)] hover:bg-[var(--button-ghost-hover-bg)] hover:text-[var(--button-ghost-hover-text)]",
-        link: "bg-transparent text-[var(--button-link-text)] underline-offset-4 hover:underline",
+        link: "bg-transparent text-[var(--button-link-text)] underline-offset-4 hover:text-[var(--button-link-hover-text)] hover:underline",
+        muted: "bg-[var(--muted)] text-[var(--muted-foreground)] hover:bg-[var(--muted)/0.9]",
+        accent: "bg-[var(--accent)] text-[var(--accent-foreground)] hover:bg-[var(--accent)/0.9]",
       },
       size: {
         default: "h-[var(--button-height)] px-[var(--button-padding-x)] py-[var(--button-padding-y)]",
@@ -33,7 +36,7 @@ const buttonVariants = cva(
   styleUrl: 'button.css',
 })
 export class Button implements VariantProps<typeof buttonVariants> {
-  @Prop() variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' = 'default';
+  @Prop() variant?: 'default' | 'primary' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'muted' | 'accent' = 'default';
   @Prop() size?: 'default' | 'sm' | 'lg' | 'icon' = 'default';
   @Prop() disabled?: boolean = false;
   @Prop() type?: 'button' | 'submit' | 'reset' = 'button';

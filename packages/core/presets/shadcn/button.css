@@ -45,6 +45,11 @@
   --button-ghost-hover-bg: hsl(var(--accent));
   --button-ghost-hover-text: hsl(var(--accent-foreground));
 
+  --button-primary-bg: hsl(var(--primary));
+  --button-primary-text: hsl(var(--primary-foreground));
+  --button-primary-hover-bg: hsl(var(--primary) / 0.9);
+  --button-primary-hover-text: hsl(var(--primary-foreground));
+
   /* Button states */
   --button-disabled-opacity: 0.5;
   --button-disabled-cursor: not-allowed;
@@ -84,6 +89,11 @@
   --button-ghost-text: hsl(var(--foreground));
   --button-ghost-hover-bg: hsl(var(--accent));
   --button-ghost-hover-text: hsl(var(--accent-foreground));
+
+  --button-primary-bg: hsl(var(--primary));
+  --button-primary-text: hsl(var(--primary-foreground));
+  --button-primary-hover-bg: hsl(var(--primary) / 0.9);
+  --button-primary-hover-text: hsl(var(--primary-foreground));
 
   --button-link-text: hsl(var(--primary));
   --button-link-hover-text: hsl(var(--primary) / 0.9);
