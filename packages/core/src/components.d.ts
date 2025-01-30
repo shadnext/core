@@ -12,7 +12,7 @@ export namespace Components {
         "loading"?: boolean;
         "size"?: 'default' | 'sm' | 'lg' | 'icon';
         "type"?: 'button' | 'submit' | 'reset';
-        "variant"?: 'default' | 'primary' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'muted' | 'accent';
+        "variant"?: 'primary' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
 }
 declare global {
@@ -33,7 +33,7 @@ declare namespace LocalJSX {
         "loading"?: boolean;
         "size"?: 'default' | 'sm' | 'lg' | 'icon';
         "type"?: 'button' | 'submit' | 'reset';
-        "variant"?: 'default' | 'primary' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'muted' | 'accent';
+        "variant"?: 'primary' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
     }
     interface IntrinsicElements {
         "n-button": NButton;
